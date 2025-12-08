@@ -22,7 +22,19 @@ namespace EtteremApi.Controllers
             {
                 return Ok(rendeles);
             }
-            return NotFound(null);
+            return BadRequest(rendeles);
+
+        }
+
+        [HttpGet("withcard")]
+        public async Task<ActionResult> GetAllRendekesWithCard()
+        {
+            var rendeles = await _rendeles.GetAllRendekesWithCard();
+            if (rendeles != null)
+            {
+                return Ok(rendeles);
+            }
+            return BadRequest(rendeles);
 
         }
     }

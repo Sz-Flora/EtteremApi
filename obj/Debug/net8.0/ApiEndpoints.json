@@ -8,5 +8,25 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EtteremApi.Controllers.RendelesController",
+    "Method": "GetAllRendekesWithCard",
+    "RelativePath": "api/Rendeles/withcard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EtteremApi.Controllers.TermekekController",
+    "Method": "GetTermek",
+    "RelativePath": "api/Termekek",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
