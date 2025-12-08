@@ -20,6 +20,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EtteremApi.Controllers.RendelesController",
+    "Method": "GetAllRendelesWithFood",
+    "RelativePath": "api/Rendeles/withfood",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EtteremApi.Controllers.TermekekController",
     "Method": "GetTermek",
     "RelativePath": "api/Termekek",

@@ -2,6 +2,7 @@
 using EtteremApi.Models;
 using EtteremApi.Services;
 using EtteremApi.Services.IRestaurant;
+using System.Text.Json.Serialization;
 
 namespace EtteremApi
 {
@@ -14,6 +15,7 @@ namespace EtteremApi
             builder.Services.AddDbContext<EtteremContext>();
             builder.Services.AddScoped<IRendeles,RendelesService>();
             builder.Services.AddScoped<ITermekek, TermekekServices>();
+            builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
             // Add services to the container.
 
