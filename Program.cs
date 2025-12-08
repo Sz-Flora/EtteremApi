@@ -1,4 +1,8 @@
 
+using EtteremApi.Models;
+using EtteremApi.Services;
+using EtteremApi.Services.IRestaurant;
+
 namespace EtteremApi
 {
     public class Program
@@ -6,6 +10,9 @@ namespace EtteremApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<EtteremContext>();
+            builder.Services.AddScoped<IRendeles,RendelesService>();
 
             // Add services to the container.
 
