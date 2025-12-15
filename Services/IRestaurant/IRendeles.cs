@@ -7,5 +7,9 @@ namespace EtteremApi.Services.IRestaurant
         Task<object> GetAllRendeles();
         Task<object> GetAllRendekesWithCard();
         Task<object> GetAllRendelesWithFood();
+        Task<object> GetAllRendelesWithCola();
+        Task<object> GetRendelesTetelLista();
+        Task<object> GetTermekRendelesLegalabbEgyszer();
+
     }
 }

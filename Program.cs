@@ -1,7 +1,9 @@
 
 using EtteremApi.Models;
+using EtteremApi.Models.Dtos;
 using EtteremApi.Services;
 using EtteremApi.Services.IRestaurant;
+using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
 namespace EtteremApi
@@ -12,9 +14,17 @@ namespace EtteremApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddDbContext<EtteremContext>();
+            builder.Services.AddDbContext<EtteremContext>(option =>
+            {
+                var ConnctionString = builder.Configuration.GetConnectionString("MySQL");
+                option.UseMySQL(ConnctionString);
+            });
+
             builder.Services.AddScoped<IRendeles,RendelesService>();
             builder.Services.AddScoped<ITermekek, TermekekServices>();
+            builder.Services.AddScoped<IKapcsolo, KapcsoloService>();
+            builder.Services.AddScoped<ResultResponseDto>();
+
             builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
             // Add services to the container.

@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "EtteremApi.Controllers.KapcsoloController",
+    "Method": "PostRelation",
+    "RelativePath": "api/Kapcsolo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addRelationDto",
+        "Type": "EtteremApi.Models.Dtos.AddRelationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EtteremApi.Controllers.RendelesController",
     "Method": "GetAllRendeles",
     "RelativePath": "api/Rendeles",
@@ -11,8 +27,38 @@
   },
   {
     "ContainingType": "EtteremApi.Controllers.RendelesController",
+    "Method": "GetTermekRendelesLegalabbEgyszer",
+    "RelativePath": "api/Rendeles/legalabbegyszer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EtteremApi.Controllers.RendelesController",
+    "Method": "GetRendelesTetelLista",
+    "RelativePath": "api/Rendeles/rendezes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EtteremApi.Controllers.RendelesController",
     "Method": "GetAllRendekesWithCard",
     "RelativePath": "api/Rendeles/withcard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EtteremApi.Controllers.RendelesController",
+    "Method": "GetAllRendelesWithCola",
+    "RelativePath": "api/Rendeles/withcola",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
